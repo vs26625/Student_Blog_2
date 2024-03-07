@@ -3,11 +3,10 @@ toc: true
 comments: false
 layout: post
 title: Snake Game
-description: this is the snake game
+description: The game with the snake to play when your done with work
 type: hacks
-courses: { csse: {week: 3} }
+courses: { compsci: {week: 2} }
 ---
-
 <style>
 
     body{
@@ -21,7 +20,7 @@ courses: { csse: {week: 3} }
         display: none;
         border-style: solid;
         border-width: 10px;
-        border-color: #FFFFFF;
+        border-color: #5f966c;
     }
     canvas:focus{
         outline: none;
@@ -67,7 +66,7 @@ courses: { csse: {week: 3} }
     }
 
     #setting input:checked + label{
-        background-color: #FFF;
+        background-color: #FFFFFF;
         color: #000;
     }
 </style>
@@ -80,7 +79,7 @@ courses: { csse: {week: 3} }
     <div class="container bg-secondary" style="text-align:center;">
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
-            <p>Welcome to Snake, press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin</p>
+            <p> <span style="background-color: #FFFFFF; color: #9bc7b0"> Welcome to Snake, press space to begin</span></p>
             <a id="new_game" class="link-alert">new game</a>
             <a id="setting_menu" class="link-alert">settings</a>
         </div>
@@ -272,7 +271,7 @@ courses: { csse: {week: 3} }
             }
             // Repaint canvas
             ctx.beginPath();
-            ctx.fillStyle = "royalblue";
+            ctx.fillStyle = "MediumAquaMarine";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Paint snake
             for(let i = 0; i < snake.length; i++){
@@ -311,19 +310,19 @@ courses: { csse: {week: 3} }
         let changeDir = function(key){
             // test key and switch direction
             switch(key) {
-                case 37:    // left arrow
+                case 65:    // (A) left arrow
                     if (snake_dir !== 1)    // not right
                         snake_next_dir = 3; // then switch left
                     break;
-                case 38:    // up arrow
+                case 87:    // (W) up arrow
                     if (snake_dir !== 2)    // not down
                         snake_next_dir = 0; // then switch up
                     break;
-                case 39:    // right arrow
+                case 68:    // (D) right arrow
                     if (snake_dir !== 3)    // not left
                         snake_next_dir = 1; // then switch right
                     break;
-                case 40:    // down arrow
+                case 83:    // (S) down arrow
                     if (snake_dir !== 0)    // not up
                         snake_next_dir = 2; // then switch down
                     break;
@@ -332,8 +331,19 @@ courses: { csse: {week: 3} }
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
         let activeDot = function(x, y){
+            //const appleSize = BLOCK;
+            //const appleX = x * BLOCK;
+            //const appleY = y * BLOCK;
+            //ctx.font = `${appleSize}px sans-serif`;
+            //ctx.fillText("🍎", appleX, appleY + appleSize); //this is for the apple emoji
+
             ctx.fillStyle = "#FFFFFF";
-            ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+            ctx.beginPath();
+            ctx.arc(x * BLOCK + BLOCK / 2, y * BLOCK + BLOCK / 2, BLOCK / 2, 0, 2 * Math.PI);
+            ctx.fill(); //this is for the circles
+            
+            //ctx.fillStyle = "#cffcd4";
+            //ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK); //this is the original
         }
         /* Random food placement */
         /////////////////////////////////////////////////////////////
@@ -368,7 +378,7 @@ courses: { csse: {week: 3} }
         let setWall = function(wall_value){
             wall = wall_value;
             if(wall === 0){screen_snake.style.borderColor = "#606060";}
-            if(wall === 1){screen_snake.style.borderColor = "#FFFFFF";}
+            if(wall === 1){screen_snake.style.borderColor = "#4e7360";}
         }
     })();
 </script>
