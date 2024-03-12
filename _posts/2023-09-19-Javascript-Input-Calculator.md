@@ -4,8 +4,8 @@ comments: true
 hide: true
 layout: post
 description: A common way to become familiar with a language is to build a calculator.  This calculator shows off button with actions.
-courses: {'compsci': {'week': 5}}
-type: hacks
+courses: {'csse': {'week': 5}}
+type: devops
 ---
 
 <!-- Heading -->

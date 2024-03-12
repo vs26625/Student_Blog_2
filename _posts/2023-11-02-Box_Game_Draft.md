@@ -2,10 +2,10 @@
 toc: True
 comments: False
 layout: post
-title: Rough Draft
+title: Delievers
 description: I worked on this while I was sick you're welcome.
-type: hacks
-courses: {'compsci': {'week': 10}}
+type: collab
+courses: {'csse': {'week': 10}}
 ---
 
 <style>

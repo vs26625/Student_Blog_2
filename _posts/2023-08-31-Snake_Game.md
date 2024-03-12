@@ -4,8 +4,8 @@ comments: false
 layout: post
 title: Snake Game
 description: The game with the snake to play when your done with work
-type: hacks
-courses: { compsci: {week: 2} }
+type: devops
+courses: { csse: {week: 2} }
 ---
 <style>
 

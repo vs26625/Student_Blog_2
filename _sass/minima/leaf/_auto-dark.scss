@@ -1,18 +1,18 @@
-$high-emph: rgba(white, 0.87);
-$med-emph: rgba(white, 0.69); 
-$low-emph: rgba(white, 0.38);
-$dark-grey : #121212; 
-// $dark-grey : #1F1B24;
-$overlay: mix($dark-grey, white, 95%);
-$overlay-light: mix($dark-grey, white, 86%);
+$high-emph: rgba(rgb(133, 62, 213), 0.87);
+$med-emph: rgba(rgb(7, 7, 7), 0.69); 
+$low-emph: rgba(rgb(7, 7, 7), 0.38);
+$alice-blue : rgb(245, 255, 250); 
+// $alice-blue : #FOF8FF;
+$overlay: mix($alice-blue, white, 95%);
+$overlay-light: mix($alice-blue, white, 86%);
 
 html, body, input, textarea, select, button {   
   color: $high-emph !important;
-  background-color: $dark-grey !important;
+  background-color: $alice-blue !important;
 }
 
 a {
-    color: rgb(75, 186, 255) !important;
+    color: rgb(133, 62, 213) !important;
 }
 
 a:hover {
@@ -24,12 +24,12 @@ a:hover {
 }
 
 .site-nav {
-    background-color: $dark-grey;
+    background-color: $alice-blue;
     border-color: $overlay-light;
 }
 
 * {
-    scrollbar-color: $dark-grey $overlay-light;
+    scrollbar-color: $alice-blue $overlay-light;
 }
 
 pre, code {
@@ -58,7 +58,7 @@ pre, code {
 }
 
 .btn:hover {
-    background-color: $dark-grey !important;
+    background-color: $alice-blue !important;
 }
 
 table th{
@@ -68,13 +68,13 @@ table th{
 }
 
 table td{
-    background-color: $dark-grey;
+    background-color: $alice-blue;
     border-color: $overlay-light;
     color: $med-emph;
 }
 
 .flash {
-    color: $dark-grey !important;
+    color: $alice-blue !important;
     filter: brightness(80%);
 }
 
@@ -109,10 +109,10 @@ li .post-meta-description {
 // Override Syntax Highlighting In Minima With the Dracula Theme: https://draculatheme.com/
 // If you wish to override any of this CSS, do so in _sass/minima/custom-styles.css
  
-$dt-gray-dark: #282a36;  // Background
-$dt-code-cell-background: #272726;
-$dt-gray: white;       // Current Line & Selection
-$dt-gray-light: aliceblue; // Foreground
+$dt-gray-dark: rgb(174, 120, 221);  // Background
+$dt-code-cell-background: rgb(147, 117, 172);
+$dt-gray: rgb(174, 120, 221);       // Current Line & Selection
+$dt-gray-light: rgb(181, 156, 203); // Foreground
 $dt-blue: #6272a4;       // Comment
 $dt-cyan: #8be9fd;
 $dt-green: #50fa7b;
@@ -124,11 +124,11 @@ $dt-yellow: #f1fa8c;
 $dt-green-light: rgb(172, 229, 145);
 
 .language-python + .language-plaintext {
-    border-left: 1px solid grey;
+    border-left: 1px solid rgb(255, 255, 255);
     margin-left: 1rem !important;
 }
 
-// ensure dark background for code in markdown
+//ensure dark background for code in markdown
 [class^="language-"]:not(.language-plaintext) pre,
 [class^="language-"]:not(.language-plaintext) code {
     background-color: $dt-code-cell-background !important;
@@ -136,7 +136,7 @@ $dt-green-light: rgb(172, 229, 145);
 }
 
 .language-python + .language-plaintext code { background-color: none !important; }
-.language-python + .language-plaintext pre  { background-color: #323443 !important; }
+.language-python + .language-plaintext pre  { background-color: #e2e3f0 !important; }
 
 // for Jupyter Notebook HTML Code Cells modified from https://www.fast.ai/public/css/hyde.css
 
@@ -145,7 +145,7 @@ $dt-green-light: rgb(172, 229, 145);
     margin-top:1.5rem !important;
     padding-bottom:1rem !important;
     padding-top:1rem !important;
-    background: #323443 !important;
+    background: rgb(255, 255, 255) !important;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace;
@@ -162,7 +162,7 @@ $dt-green-light: rgb(172, 229, 145);
     border-left: 1px solid lightcoral;
 }
 .output_area pre {
-    border-left: 1px solid grey;
+    border-left: 1px solid rgb(255, 255, 255);
     margin-left: 1rem !important;
     font-size: 16px;
 }
@@ -260,7 +260,7 @@ $dt-green-light: rgb(172, 229, 145);
     }
 
     .c1 {
-      color: gray;
+      color: rgb(255, 255, 255);
     }
   
     .kd,
