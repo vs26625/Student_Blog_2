@@ -4,8 +4,8 @@ comments: true
 layout: post
 title: Husky Sprite Sheet
 description: A cute little husky to play with. Reminds me of my dog
-type: hacks
-courses: { compsci: {week: 6} }
+type: devops
+courses: { csse: {week: 6} }
 ---
 
 <body>
